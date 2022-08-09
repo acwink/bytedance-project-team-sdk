@@ -8,7 +8,7 @@
     "build": " npm run lint && rimraf dist types && cross-env NODE_ENV=production webpack --config ./scripts/webpack.prod.js",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "lint": "eslint src",
+    "lint": "eslint --no-error-on-unmatched-pattern packages",
     "prepare": "husky install",
     "release": "standard-version",
     "release-major": "standard-version --release-as major",
@@ -73,5 +73,9 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "bowser": "^2.11.0",
+    "ua-parser-js": "^1.0.2"
   }
 }

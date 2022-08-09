@@ -18,14 +18,15 @@
     "baseUrl": ".",
     // 非相对模块导入的路径映射配置
     "paths": {
-      "@/*": ["src/*"],
+      "@/*": ["packages/*"],
+      "@websrc/*": ["packages/web/src/*"],
       "@docs/*": ["docs/*"],
       "@public/*": ["public/*"],
       "@test/*": ["test/*"]
     }
   },
   // 编译器默认包含的编译文件，src是源代码文件夹，test是jest测试代码文件夹
-  "include": ["src/**/*", "test/**/*"],
+  "include": ["packages/**/*", "test/**/*"],
   // 编译器默认排除的编译文件
   "exclude": ["node_modules"]
 }
